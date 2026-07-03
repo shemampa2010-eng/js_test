@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Mon Site JavaScript</title>
     <style>
-        body{
+        body {
             background-color: black;
+            transition: background-color 0.3s; /* Pour un changement fluide */
         }
-        h2,
-        p{
+        h2, p {
             color: white;
         }
     </style>
@@ -18,5 +20,9 @@
 <p id="demo">I like pinneaple.</p>
 
 <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-<button type="button" onclick='document.body.style.backgroundColor = "red"'>Changer le fond</button></body>
+
+<button type="button" onclick="changerCouleur()">Changer de couleur</button>
+
+<script src="script.js"></script>
+</body>
 </html>
