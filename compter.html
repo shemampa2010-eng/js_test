@@ -10,6 +10,7 @@
     <p id="p"></p>
      <button type="button" onclick="augmenter()">augmenter</button>
      <button type="button" onclick="diminuer()">diminuer</button>
+     <button type="button" onclick="reset()">reset</button>
     <script>    
         let nombre = 0
         function augmenter(){
@@ -23,6 +24,10 @@
             } else{
                 document.getElementById("p").innerHTML="can not do this operation"
             }
+        }
+        function reset(){
+            nombre = 0
+            document.getElementById("p").innerHTML=""
         }
     </script>
 </body>
