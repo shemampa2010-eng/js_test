@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Simple Calculatrice</h2>
+
+<input type="number" id="n1" placeholder="Nombre 1">
+<input type="number" id="n2" placeholder="Nombre 2">
+
+<br><br>
+
+<button onclick="addition()">Add</button>
+<button onclick="soustraction()">soustraction</button>
+
+<h3 id="result">Résultat : 0</h3>
+
+<script>
+function addition() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+
+    let resultat = a + b;
+
+    document.getElementById("result").innerHTML = "Résultat : " + resultat;
+}
+function soustraction() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+
+    let resultat = a - b;
+
+    document.getElementById("result").innerHTML = "Résultat : " + resultat;
+}
+function multiplication() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+
+    let resultat = a * b;
+
+    document.getElementById("result").innerHTML = "Résultat : " + resultat;
+}
+</script>
+
+</body>
+</html>
