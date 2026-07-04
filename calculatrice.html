@@ -12,6 +12,7 @@
 <button onclick="addition()">Add</button>
 <button onclick="soustraction()">soustraction</button>
 <button onclick="multiplication()">multiplication</button>
+<button onclick="division()">division</button>
 
 <h3 id="result">Résultat : 0</h3>
 
@@ -37,6 +38,14 @@ function multiplication() {
     let b = Number(document.getElementById("n2").value);
 
     let resultat = a * b;
+
+    document.getElementById("result").innerHTML = "Résultat : " + resultat;
+}
+function division() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+
+    let resultat = a / b;
 
     document.getElementById("result").innerHTML = "Résultat : " + resultat;
 }
