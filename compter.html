@@ -7,15 +7,25 @@
 </head>
 <body>
     <h1 id="compteur">0</h1>
+    <p id="p">{}</p>
      <button type="button" onclick="augmenter()">augmenter</button>
+     <button type="button" onclick="diminuer()">diminuer</button>
     <script>    
         let nombre = 0
         function augmenter(){
             nombre = nombre + 1;
-            console.log(nombre)
             document.getElementById("compteur").innerHTML = nombre;
         }
+        function diminuer(){
+            if (nombre > 0){
+                nombre = nombre - 1;
+                document.getElementById("compteur").innerHTML = nombre;
+            } else{
+                document.getElementById("p").innerHTML="can not do this operation"
+            }
+                
+
+        }
     </script>
-   
 </body>
 </html>
