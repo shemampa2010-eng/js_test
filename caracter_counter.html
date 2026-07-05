@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+</head>
+<body>
+    <textarea id="text" rows="10" cols="50" placeholder="Write here..."></textarea>
+    <p>Characters : <span id="charCount">0</span></p>
+    <p id="warning" style="color:red;"></p>
+    <script>
+        const text = document.getElementById("text");
+        const charCount = document.getElementById("charCount");
+        const warning = document.getElementById("warning");
+
+        text.addEventListener("input", function () {
+            let length = text.value.length;
+
+            charCount.textContent = length;
+            
+            if (length > 200) {
+                warning.textContent = "Tu as depasse 200 caracteres !";
+            } else  if (length > 160){
+                warning.textContent = "Attention a ne pas depasser 200 caracteres"
+            } else {
+                warning.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
