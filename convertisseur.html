@@ -7,9 +7,12 @@
 </head>
 <body>
     <input type="number" id="Celcius" placeholder="Celcius">
+    <input type="number" id="fahrenheit" placeholder="fahrenheit">
     <br><br>
     <p id="resultat"></p>
-    <button onclick="convertisseur()">convertisseur</button>
+    <button onclick="convertisseur()">Celcius vers Fahrenheit</button>
+    <button onclick="FahrenheitVerscelsius()">Fahrenheit vers Celcius</button>
+
     <script>
         function convertisseur(){
 
@@ -20,6 +23,15 @@
             document.getElementById("resultat").innerHTML =
             celsius + " °C = " + fahrenheit + " °F";
 
+        }
+        function FahrenheitVerscelsius(){
+
+            let fahrenheit = document.getElementById("fahrenheit").value;
+
+            let celsius = (fahrenheit - 32) * 5/9;
+
+            document.getElementById("resultat").innerHTML= 
+            fahrenheit + " °F = "+ celsius + " °C" 
         }
     </script>
 </body>
