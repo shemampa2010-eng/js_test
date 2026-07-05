@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="number" id="Celcius" placeholder="Celcius">
+    <br><br>
+    <p id="resultat"></p>
+    <button onclick="convertisseur()">convertisseur</button>
+    <script>
+        function convertisseur(){
+
+            let celsius = document.getElementById("Celcius").value;
+
+            let fahrenheit = (celsius * 9/5)+32;
+
+            document.getElementById("resultat").innerHTML = fahrenheit ;
+
+        }
+    </script>
 </body>
 </html>
