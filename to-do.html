@@ -11,17 +11,7 @@
     <input id="taskInput" type="text" placeholder="Ajoute une tache">
     <button onclick="addTask()">Ajouter</button>
     <ul id="list">
-        <li>
-            <input type="checkbox"> Apprendre JavaScript
-        </li>
-
-        <li>
-            <input type="checkbox"> Faire mes devoirs
-        </li>
-
-        <li>
-            <input type="checkbox"> Sport
-        </li>
+        
     </ul>
     <script>
        
@@ -32,11 +22,23 @@
 
             let li = document.createElement("li");
 
-            li.innerHTML = '<input type="checkbox"> ' + text;
+            li.innerHTML = '<input type="checkbox" onchange="checkTask(this)"> ' + text;
 
             document.getElementById("list").appendChild(li);
             
             input.value = "";
+        }
+        function checkTask(checkbox) {
+
+            let task = checkbox.parentElement;
+
+            if (checkbox.checked) {
+                task.style.textDecoration = "line-through";
+                task.style.color = "gray";
+            } else {
+                task.style.textDecoration = "none";
+                task.style.color = "black";
+            }
         }
 
     </script>
