@@ -32,10 +32,10 @@
 
             let li = document.createElement("li");
 
-            li.innerText = text;
+            li.innerHTML = '<input type="checkbox"> ' + text;
 
             document.getElementById("list").appendChild(li);
-
+            
             input.value = "";
         }
 
