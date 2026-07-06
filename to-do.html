@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>To Do List</title>
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,6 +26,8 @@
 
             let input = document.getElementById("taskInput");
             let text = input.value;
+
+            if (text==="") return
 
             let li = document.createElement("li");
 
