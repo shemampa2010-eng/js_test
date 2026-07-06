@@ -8,8 +8,9 @@
 <body>
 
     <h2>Ma To-Do List</h2>
-
-    <ul>
+    <input id="taskInput" type="text" placeholder="Ajoute une tache">
+    <button onclick="addTask()">Ajouter</button>
+    <ul id="list">
         <li>
             <input type="checkbox"> Apprendre JavaScript
         </li>
@@ -22,6 +23,23 @@
             <input type="checkbox"> Sport
         </li>
     </ul>
+    <script>
+       
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+            let text = input.value;
+
+            let li = document.createElement("li");
+
+            li.innerText = text;
+
+            document.getElementById("list").appendChild(li);
+
+            input.value = "";
+        }
+
+    </script>
 
 </body>
 </html>
