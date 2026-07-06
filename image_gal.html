@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .thumb {
+            width: 200px;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .active {
+            border: 3px solid blue;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
     <img src="SWAG.png" width="380" id="image">
     <br><br>
 
-    <img src="skz x mahagrid 8 ball icon.jpeg" width="200" onclick="changer('skz x mahagrid 8 ball icon.jpeg')">
-    <img src="Start.png" width="200" onclick="changer('Start.png')">
-    <img src="SWAG.png" width="200" onclick="changer('SWAG.png')">
+    <img src="skz x mahagrid 8 ball icon.jpeg" width="200" class="thumb" onclick="changer('skz x mahagrid 8 ball icon.jpeg')">
+    <img src="Start.png" width="200" class="thumb" onclick="changer('Start.png')">
+    <img src="SWAG.png" width="200" class="thumb" onclick="changer('SWAG.png')">
 
     <script>
         function changer(image) {
