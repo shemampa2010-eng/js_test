@@ -8,11 +8,9 @@
         .thumb {
             width: 200px;
             cursor: pointer;
-            opacity: 0.6;
+            opacity: 0.4;
         }
-
         .active {
-            border: 3px solid blue;
             opacity: 1;
         }
     </style>
@@ -22,13 +20,19 @@
     <img src="SWAG.png" width="380" id="image">
     <br><br>
 
-    <img src="skz x mahagrid 8 ball icon.jpeg" width="200" class="thumb" onclick="changer('skz x mahagrid 8 ball icon.jpeg')">
-    <img src="Start.png" width="200" class="thumb" onclick="changer('Start.png')">
-    <img src="SWAG.png" width="200" class="thumb" onclick="changer('SWAG.png')">
+    <img src="skz x mahagrid 8 ball icon.jpeg" width="200" class="thumb" onclick="changer(this)">
+    <img src="Start.png" width="200" class="thumb" onclick="changer(this)">
+    <img src="SWAG.png" width="200" class="thumb" onclick="changer(this)">
 
     <script>
-        function changer(image) {
-            document.getElementById("image").src = image;
+        function changer(img) {
+
+            document.getElementById("image").src = img.src;
+
+            let thumbs = document.querySelectorAll(".thumb");
+            thumbs.forEach(t => t.classList.remove("active"));
+
+            img.classList.add("active");
         }
     </script>
 
