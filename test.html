@@ -6,15 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="addf()">Try it</button>
     <p id="p1"></p>
+   
     <script>
-        const fruits = ["Banane","Pomme","Anana","Fraise"]
-        document.getElementById("p1").innerHTML=fruits
-        function addf(){
-            fruits.push("Lemon");
-            document.getElementById('p1').innerHTML=fruits
+        let x = ""
+        const obj={
+            name :"John Doe",
+            age : 56,
+            cars: [
+                {name: "Benz" , models : ["Class S", "Class C", "Class A"]},
+                {name: "Toyota", models : ["Corolla"]},
+                {name: "Audi", models : ["RS3","GT3"]}
+            ]
+
         }
+        for (let i in obj.cars) {
+            x += "<h2>" + obj.cars[i].name + "</h2>";
+            for (let j in obj.cars[i].models) {
+                x += obj.cars[i].models[j] + "<br>";
+            }
+        }
+        document.getElementById("p1").innerHTML= x;
     </script>
 </body>
 </html>
