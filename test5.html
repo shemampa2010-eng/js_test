@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1"></p>
+
+<script>
+
+const ages = [10, 14, 17, 20, 25];
+
+const index = ages.findIndex(function(age) {
+    return age >= 18;
+});
+
+document.getElementById("p1").innerHTML = index;
+
+</script>
+
+</body>
+</html>
