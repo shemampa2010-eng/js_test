@@ -7,13 +7,16 @@
 </head>
 <body>
     <p id="p1"></p>
+    <p id="p2"></p>
     <script>
         const personnes = [["fille1","fille2","fille3"],["garcon1","garcon2","garcon3"]]
         //personnes.copyWithin(3,0,2)
         const npersonnes = personnes.flat()
+        const newpersonnes = npersonnes.toSpliced(3,1,"Manger")
         //console.log(npersonnes)
-        npersonnes.splice(3,0,"fille4")
+        //npersonnes.splice(3,3,"fille4")
         document.getElementById("p1").innerHTML = npersonnes
+        document.getElementById("p2").innerHTML = newpersonnes
     </script>
 </body>
 </html>
