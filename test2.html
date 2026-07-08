@@ -8,8 +8,10 @@
 <body>
     <p id="p1"></p>
     <script>
-        const personnes = ["fille1","fille2","fille3","garcon1","garcon2","garcon3"]
-        personnes.copyWithin(3,0,2)
+        const personnes = [["fille1","fille2","fille3"],["garcon1","garcon2","garcon3"]]
+        //personnes.copyWithin(3,0,2)
+        const npersonnes = personnes.flat()
+        console.log(npersonnes)
         document.getElementById("p1").innerHTML = personnes
     </script>
 </body>
