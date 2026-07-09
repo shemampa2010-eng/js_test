@@ -18,8 +18,10 @@
 
         const expensiveProduct = products.find(product => product.price > 600);
 
+        const cheapProducts = products.filter(product => product.price < 100);
 
         console.log("Premier produit cher :", expensiveProduct);
+        console.log("Produits moins chers :", cheapProducts);
     </script>
 </body>
 </html>
