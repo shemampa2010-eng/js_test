@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
     <script>
         const students = [
             {name: "Paul", grade: 14},
@@ -14,7 +15,8 @@
             {name: "Lucas", grade: 9},
             {name: "Sarah", grade: 20}
         ];
-        document.getElementById("h1").innerHTML = students.find(student => student.grade > 15)
+        document.getElementById("h1").innerHTML = students.find(student => student.grade > 15);
+        document.getElementById("h2").innerHTML = students.filter(student => student.grade >= 10)
     </script>
 </body>
 </html>
