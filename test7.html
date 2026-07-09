@@ -8,8 +8,13 @@
 <body>
     <h1 id="h1"></h1>
     <script>
-        const numbers = [20, 80, 35, 100, 10, 90];
-        document.getElementById("h1").innerHTML = numbers.findLast(x => x<50)
+        const students = [
+            {name: "Paul", grade: 14},
+            {name: "Emma", grade: 18},
+            {name: "Lucas", grade: 9},
+            {name: "Sarah", grade: 20}
+        ];
+        document.getElementById("h1").innerHTML = students.find(student => student.grade > 15)
     </script>
 </body>
 </html>
