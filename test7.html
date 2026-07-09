@@ -20,13 +20,15 @@
 
         const cheapProducts = products.filter(product => product.price < 100);
 
-        const phoneIndex = products.findIndex(product => product.name === "Phone") + 1;
+        const phoneIndex = products.findIndex(product => product.name === "Phone");
+
+        const lastCheapProduct = products.findLast(product => product.price < 1000);
 
 
         console.log("Premier produit cher :", expensiveProduct);
         console.log("Produits moins chers :", cheapProducts);
         console.log("Index du téléphone :", phoneIndex);
-
+        console.log("Dernier produit < 1000 :", lastCheapProduct);
     </script>
 </body>
 </html>
