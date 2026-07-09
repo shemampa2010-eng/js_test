@@ -9,11 +9,8 @@
     <p id="p1"></p>
     <p id="p2"></p>
     <script>
-        const num= [12,43,9,5,42,54,21]
-        const nnum = num.find(function (i){
-            return i => 18
-        })
-        document.getElementById("p1").innerHTML = nnum
+        const numbers = [12, 34, 67, 89, 23, 100];
+        document.getElementById("p1").innerHTML = numbers.find(x => x > 50)
     </script>
 </body>
 </html>
