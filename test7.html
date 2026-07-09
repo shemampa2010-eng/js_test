@@ -20,8 +20,13 @@
 
         const cheapProducts = products.filter(product => product.price < 100);
 
+        const phoneIndex = products.findIndex(product => product.name === "Phone") + 1;
+
+
         console.log("Premier produit cher :", expensiveProduct);
         console.log("Produits moins chers :", cheapProducts);
+        console.log("Index du téléphone :", phoneIndex);
+
     </script>
 </body>
 </html>
