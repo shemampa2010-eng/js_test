@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades Filter</title>
+</head>
+
+<body>
+
+    <h1>Your grades</h1>
+
+    <p>
+        <input type="number" id="nombre" value="10">
+    </p>
+
+    <button onclick="myFunction(document.getElementById('nombre').value)">
+        confirm
+    </button>
+
+    <p id="p1"></p>
+
+    <script>
+        const grades = [12, 7, 18, 5, 15, 9, 20];
+
+        function myFunction(value) {
+
+            const result = grades.filter(function(grade) {
+                return grade > value;
+            });
+
+            document.getElementById("p1").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
