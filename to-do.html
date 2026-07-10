@@ -9,6 +9,9 @@
             margin: 0;
             padding: 0;
         }
+        li {
+            transition: 2s;
+        }
     </style>
 </head>
 
@@ -51,6 +54,8 @@
             if (checkbox.checked) {
                 task.style.textDecoration = "line-through";
                 task.style.color = "gray";
+                task.done = true ;
+                task.remove();
             } else {
                 task.style.textDecoration = "none";
                 task.style.color = "black";
