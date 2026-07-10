@@ -5,9 +5,9 @@
     <title>To Do List</title>
     <style>
         ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -17,26 +17,33 @@
     <h2>Ma To-Do List</h2>
     <input id="taskInput" type="text" placeholder="Ajoute une tache">
     <button onclick="addTask()">Ajouter</button>
-    <ul id="list">
-        
-    </ul>
+
+    <ul id="list"></ul>
+
     <script>
+        const tasks = [];
        
         function addTask() {
 
             let input = document.getElementById("taskInput");
-            let text = input.value;
 
-            if (text==="") return
+            if (input.value === "") return;
+
+            tasks.push({
+                texte: input.value,
+                done: false
+            });
 
             let li = document.createElement("li");
 
-            li.innerHTML = '<input type="checkbox" onchange="checkTask(this)"> ' + text;
+            li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value;
 
             document.getElementById("list").appendChild(li);
-            
+
             input.value = "";
         }
+
+
         function checkTask(checkbox) {
 
             let task = checkbox.parentElement;
@@ -49,7 +56,6 @@
                 task.style.color = "black";
             }
         }
-
     </script>
 
 </body>
