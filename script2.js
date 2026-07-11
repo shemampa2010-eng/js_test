@@ -26,6 +26,7 @@ function checkTask(checkbox) {
     let task = checkbox.parentElement;
 
     if (checkbox.checked) {
+
         task.style.textDecoration = "line-through";
         task.style.color = "gray";
 
@@ -34,15 +35,28 @@ function checkTask(checkbox) {
         }, 1300);
 
     } else {
+
         task.style.textDecoration = "none";
         task.style.color = "black";
+
     }
 }
 
 
 function deleteAll() {
 
-    document.getElementById("list").innerHTML = "";
-    tasks.length = 0;
+    let allTasks = document.querySelectorAll("#list li");
 
+    allTasks.forEach(function(task) {
+
+        task.style.textDecoration = "line-through";
+        task.style.color = "gray";
+
+        setTimeout(function() {
+            task.remove();
+        }, 1300);
+
+    });
+
+    tasks.length = 0;
 }
