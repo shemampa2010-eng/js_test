@@ -10,7 +10,7 @@
             padding: 0;
         }
         li {
-            transition: 2s;
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -19,7 +19,8 @@
 
     <h2>Ma To-Do List</h2>
     <input id="taskInput" type="text" placeholder="Ajoute une tache">
-    <button onclick="addTask()">Ajouter</button>
+    <button onclick="addTask()">Ajouter</button> <br><br>
+    <button onclick="deleteAll()">Tout supprimer</button>
 
     <ul id="list"></ul>
 
@@ -56,11 +57,15 @@
                 task.style.color = "gray";
                 setTimeout(function () {
                     task.remove();
-                }, 2000);
+                }, 1300);
             } else {
                 task.style.textDecoration = "none";
                 task.style.color = "black";
             }
+        }
+        function deleteAll(){
+            document.getElementById("list").innerHTML = "";
+            tasks.length = 0
         }
     </script>
 
