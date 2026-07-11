@@ -13,13 +13,19 @@ function addTask() {
 
     let li = document.createElement("li");
 
-    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value + "<button class='sup'>Supprimer</button>";
+    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value + "<button class='sup' onclick='deleteTask(this)'>Supprimer</button>";
 
     document.getElementById("list").appendChild(li);
 
     input.value = "";
 }
+function deleteTask(button) {
 
+    let task = button.parentElement;
+
+    task.remove();
+
+}
 
 function checkTask(checkbox) {
 
