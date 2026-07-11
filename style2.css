@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    transition: 0.3s;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
