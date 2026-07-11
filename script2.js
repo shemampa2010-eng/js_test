@@ -13,7 +13,7 @@ function addTask() {
 
     let li = document.createElement("li");
 
-    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value;
+    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value + "<button class='sup'>Supprimer</button>";
 
     document.getElementById("list").appendChild(li);
 
@@ -29,10 +29,6 @@ function checkTask(checkbox) {
 
         task.style.textDecoration = "line-through";
         task.style.color = "gray";
-
-        setTimeout(function () {
-            task.remove();
-        }, 1300);
 
     } else {
 
