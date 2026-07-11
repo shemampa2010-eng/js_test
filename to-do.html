@@ -54,7 +54,9 @@
             if (checkbox.checked) {
                 task.style.textDecoration = "line-through";
                 task.style.color = "gray";
-                task.remove();
+                setTimeout(function () {
+                    task.remove();
+                }, 2000);
             } else {
                 task.style.textDecoration = "none";
                 task.style.color = "black";
