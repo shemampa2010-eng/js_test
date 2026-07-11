@@ -11,21 +11,33 @@ function addTask() {
         done: false
     });
 
+    let index = tasks.length - 1;
+
     let li = document.createElement("li");
 
-    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" + input.value + "<button class='sup' onclick='deleteTask(this)'>Supprimer</button>";
+    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" 
+    + input.value 
+    + "<button class='sup' onclick='deleteTask(" + index + ", this)'>Supprimer</button>";
 
     document.getElementById("list").appendChild(li);
 
     input.value = "";
+
+    console.log(tasks);
 }
-function deleteTask(button) {
+
+
+function deleteTask(index, button) {
 
     let task = button.parentElement;
 
     task.remove();
 
+    tasks.splice(index, 1);
+
+    console.log(tasks);
 }
+
 
 function checkTask(checkbox) {
 
