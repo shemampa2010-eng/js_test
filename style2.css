@@ -4,14 +4,6 @@ ul {
     padding: 0;
 }
 
-li {
-    transition: 0.3s;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid;
-    border-radius: 8px;
-}
-
 input {
     padding: 8px;
     border-radius: 5px;
@@ -28,4 +20,20 @@ h2 {
 }
 body{
     background-color: azure;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 60vw ;
+}
+.sup {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
 }
