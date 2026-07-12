@@ -35,7 +35,6 @@ function deleteTask(index, button) {
 
     tasks.splice(index, 1);
 
-    console.log(tasks);
 }
 
 
@@ -74,3 +73,4 @@ function deleteAll() {
 
     tasks.length = 0;
 }
+document.getElementById("p1").innerHTML = tasks
