@@ -14,6 +14,7 @@ function addTask() {
     let index = tasks.length - 1;
 
     let li = document.createElement("li");
+    li.className = "task";
 
     li.innerHTML =
     "<input type='checkbox'>" +
