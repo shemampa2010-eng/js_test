@@ -15,9 +15,10 @@ function addTask() {
 
     let li = document.createElement("li");
 
-    li.innerHTML = "<input type='checkbox' onclick='checkTask(this)'>" 
-    + input.value 
-    + "<button class='sup' onclick='deleteTask(" + index + ", this)'>Supprimer</button>";
+    li.innerHTML =
+    "<input type='checkbox'>" +
+    "<span>" + input.value + "</span>" +
+    "<button class='sup'>Supprimer</button>";
 
     document.getElementById("list").appendChild(li);
 
@@ -73,4 +74,4 @@ function deleteAll() {
 
     tasks.length = 0;
 }
-document.getElementById("p1").innerHTML = tasks
+const tasks = [];
