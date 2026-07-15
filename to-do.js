@@ -19,7 +19,7 @@ function addTask() {
     li.innerHTML =
     "<input type='checkbox'>" +
     "<span>" + input.value + "</span>" +
-    "<button class='sup'>Supprimer</button>";
+    "<button class='sup' onclick='deleteTask(this)'>Supprimer</button>";
 
     document.getElementById("list").appendChild(li);
 
@@ -29,13 +29,11 @@ function addTask() {
 }
 
 
-function deleteTask(index, button) {
+function deleteTask(button) {
 
     let task = button.parentElement;
 
     task.remove();
-
-    tasks.splice(index, 1);
 
 }
 
