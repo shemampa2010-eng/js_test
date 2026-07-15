@@ -75,4 +75,3 @@ function deleteAll() {
 
     tasks.length = 0;
 }
-const tasks = [];
