@@ -37,3 +37,20 @@ li {
     cursor: pointer;
     margin-left: auto;
 }
+.task {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+
+.task span {
+    margin-left: 10px;
+    flex: 1;
+}
+
+
+.sup {
+    margin-left: auto;
+}
