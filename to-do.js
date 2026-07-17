@@ -6,13 +6,14 @@ function addTask() {
     let input = document.getElementById("taskInput");
 
     if (input.value === "") return;
-
+    temps = Date.now()
 
     tasks.push({
         texte: input.value,
-        done: false
+        done: false,
+        id: temps
     });
-
+    console.log(tasks)
 
     let li = document.createElement("li");
     li.className = "task";
