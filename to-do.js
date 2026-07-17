@@ -6,17 +6,22 @@ function addTask() {
     let input = document.getElementById("taskInput");
 
     if (input.value === "") return;
-    temps = Date.now()
+
+    let temps = Date.now();
 
     tasks.push({
         texte: input.value,
         done: false,
         id: temps
     });
-    console.log(tasks)
+
+    console.log(tasks);
+
 
     let li = document.createElement("li");
     li.className = "task";
+
+    li.dataset.id = temps;
 
 
     li.innerHTML =
@@ -24,9 +29,11 @@ function addTask() {
     "<span>" + input.value + "</span>" +
     "<button class='sup' onclick='deleteTask(this)'>Supprimer</button>";
 
+
     let checkbox = li.querySelector("input");
-    let mot = li.querySelector("span")
+    let mot = li.querySelector("span");
     let task = checkbox.parentElement;
+    
 
     checkbox.addEventListener("change", function () {
 
@@ -58,6 +65,22 @@ function addTask() {
 function deleteTask(button) {
 
     let task = button.parentElement;
+
+    let id = Number(task.dataset.id);
+
+
+    let index = tasks.findIndex(function(task) {
+
+        return task.id === id;
+
+    });
+
+
+    tasks.splice(index, 1);
+
+
+    console.log(tasks);
+
 
     task.remove();
 
