@@ -24,22 +24,21 @@ function addTask() {
     "<button class='sup' onclick='deleteTask(this)'>Supprimer</button>";
 
     let checkbox = li.querySelector("input");
-
+    let mot = li.querySelector("span")
     let task = checkbox.parentElement;
 
     checkbox.addEventListener("change", function () {
 
-        console.log("one");
 
         if (checkbox.checked) {
-
-            task.style.textDecoration = "line-through";
-            task.style.color = "gray";
+            
+            mot.style.textDecoration = "line-through";
+            mot.style.color = "gray";
 
         } else {
 
-            task.style.textDecoration = "none";
-            task.style.color = "black";
+            mot.style.textDecoration = "none";
+            mot.style.color = "black";
 
         }
 
